@@ -141,7 +141,7 @@ else:
         attraction_lookup = df[["AttractionId","Attraction"]].drop_duplicates()
         top5 = top5.merge(attraction_lookup, on="AttractionId")
 
-=======
+
 import streamlit as st
 import pandas as pd
 import pickle
@@ -284,6 +284,4 @@ else:
 
         attraction_lookup = df[["AttractionId","Attraction"]].drop_duplicates()
         top5 = top5.merge(attraction_lookup, on="AttractionId")
-
->>>>>>> e31455d87453c0734c8c0cb351044e5877186c19
         st.write(top5[["Attraction","avg_rating","count"]])
